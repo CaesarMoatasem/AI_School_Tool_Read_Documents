@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Examline's server uses the Firebase Admin SDK, which is not limited by these rules.
+    // Nobody else (no browser, no app) may read or write the database directly.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

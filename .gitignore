@@ -1,0 +1,9 @@
+node_modules/
+data/
+.env
+*.log
+firebase-service-account*.json
+*-firebase-adminsdk-*.json
+.emulator-data/
+firebase-debug.log
+firestore-debug.log
